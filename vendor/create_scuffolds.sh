@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git checkout scuffolding
+git checkout scuffolding || exit
 rails generate scuffold AnnotatedChalenge groundtruth:binary chalenge:binary
 rails generate scuffold Dataset description:string
 rails generate scuffold Competition description:string
