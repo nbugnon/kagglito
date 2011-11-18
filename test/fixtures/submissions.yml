@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  responce: 
+  score: 
+  questionTime: 2011-11-19
+  responceTime: 2011-11-19
+
+two:
+  responce: 
+  score: 
+  questionTime: 2011-11-19
+  responceTime: 2011-11-19
