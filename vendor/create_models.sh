@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git checkout simple_models|| exit
+git checkout simple_model|| exit
 rails generate model AnnotatedChalenge groundtruth:binary chalenge:binary
 rails generate model Dataset description:string
 rails generate model Competition description:string
