@@ -37,7 +37,7 @@ end
 
 #anguelos for image manipulation
 gem 'narray'
-gem 'RMagick'
+gem 'rmagick'
 gem 'imageruby-bmp'
 
 #
