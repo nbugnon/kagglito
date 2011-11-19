@@ -34,3 +34,10 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+#anguelos for image manipulation
+gem 'narray'
+gem 'RMagick'
+gem 'imageruby-bmp'
+
+#

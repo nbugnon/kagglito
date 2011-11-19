@@ -1,1 +1,50 @@
-This project is a default rails project for the moment
+Models added
+no db:migrate etc
+
+As I understand, scafolding is incopatible with ActiveRecord (DB relatioships) and some tutorials discourage it
+as a production tool. I guess a good way to use scaffolds is branching in git and creating them to look at them 
+as examples.
+
+
+The model is relatively simple:
+
+1)We treat The training stage and the testing stage as 2 distinct competitions
+2)AnnotatedChalenge : a pair of BLOBs with a question and its ideal responce
+3)Dataset: a grouping of Annotated Chalenges +description
+4)Evaluator: ruby source code that evaluates the distance beetween a submission and the annotated chalenge 
+	many distances can be implemented in a simgle Evaluator
+5)Competition: a Dataset + an evaluator
+6)User: a person that can participate in competitions
+7)Submission: the responce of a person to a chalenge in a particular competition
+
+particular case in the model:
+In the relationship Competition<->User we have two distinct relasionships 
+1)To participate in a competition 
+2)To host/create a Competition
+It is discouraged to use active record to implement both
+A very simple solution would be to create a diferent model for the administrator
+
+
+Desired fonctionality:
+
+User subscription to the service and to the competions
+
+Insert a dataset (and its respective AnnotatedChalenges) as a zip file (maybe not in rails)
+Create two datasets by spliting randomly a dataset
+Create a dataset by merging two others
+Create Dataset by removing AnnotatedChalenges from datasets
+
+Create competions
+
+Mail notifications 
+
+
+
+
+in ./vendor two scripts contain the rails commands that create the models and the 
+scaffolds for our ER model
+
+in ./vendor is also a ruby file to deal with the BLOB->image isues (for the evaluator)
+
+for the moment the gems used 'narray' 'RMagick' 'imageruby-bmp'
+
